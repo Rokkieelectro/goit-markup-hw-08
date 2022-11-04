@@ -1,0 +1,42 @@
+.fltr-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+
+}
+
+.fltr-button {
+    background: #F5F4FA;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+    padding: 6px 22px;
+    display: block;
+  transition-property:background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 1, 0.2, 1);
+  &:hover {
+    background-color: var(--hover-color);
+    color:#FFFFFF;
+}
+  &:focus{
+    background: var(--focus-color);
+    color:#FFFFFF;
+}
+}
+
+
+
+
+
+.fltr-txt {
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.03em;
+}
