@@ -1,15 +1,18 @@
 .benefits{
 display: flex;
-align-items:baseline;
+// align-items:baseline;
+flex-wrap: wrap;
 gap: 30px;
+
 }
 
 .benefits__item {
   min-width: 270px;
+  width: 100%;
   &::before {
 content:"" ;
 display: block;
-width: 270px;
+// width: 270px;
 height: 120px;
 border-radius: 4px;
 background-color:  #F5F4FA;
@@ -17,6 +20,13 @@ background-repeat: no-repeat;
 background-position: center;
 margin-bottom: 30px;
 }
+ @media screen and (min-width: 768px) {
+    width: calc(( 100% - 30px ) / 2); 
+   }
+
+    @media screen and (min-width: 1200px) {
+     width: calc(( 100% - 90px ) / 4);
+   }
 }
 
 
@@ -46,6 +56,10 @@ text-transform: uppercase;
 color: #212121;
 margin-top: 0;
 margin-bottom: 10px;
+text-align: center;
+ @media screen and (min-width: 768px) {
+  text-align: left;
+  }
 }
 
 .benefits__text{

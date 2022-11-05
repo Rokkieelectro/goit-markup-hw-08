@@ -17,6 +17,22 @@ width: calc((100% - 90px / 3 ));
 
 .what-section {
 padding-bottom: 94px;
+display: none;
+
+
+@include mobile {
+display: none;
+}
+
+@include tablet {
+  display: none;
+}
+
+
+@include desktop {
+display: contents;
+padding-bottom: 94px;
+}
 }
 
 .what-top-text {
@@ -44,4 +60,3 @@ justify-content:center;
 .what-wrap {
 position: relative;
 }
-

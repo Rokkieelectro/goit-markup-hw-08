@@ -10,7 +10,11 @@
 
 .persons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   gap: 30px;
+
 }
 
 .persons__names {
@@ -36,6 +40,7 @@
 .team {
   background: #f5f4fa;
   padding-bottom: 94px;
+
 }
 
 .persons__card-sign {
@@ -46,11 +51,25 @@
 .persons__card {
   background: #ffffff;
   display: block;
-  width: 270px;
+  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+    @include mobile {
+    width: 480px;
+  }
+
+
+@include tablet {
+    width: calc(( 100% - 30px ) / 2); 
 }
+
+@include desktop {
+    width: calc(( 100% - 90px ) / 4); 
+}
+
+}
+
 
 .social-wrap {
   padding-bottom: 30px;
@@ -62,11 +81,10 @@
   align-items: center;
   justify-content: center;
   padding-left: 0;
+  gap: 10px;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
+
 
 .social__link {
   width: 44px;

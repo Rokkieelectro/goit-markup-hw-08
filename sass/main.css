@@ -18,39 +18,18 @@ p {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 500px;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: tomato;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
-
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ECECEC;
@@ -370,33 +349,23 @@ header {
 
 .benefits {
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
   gap: 30px;
 }
 
 .benefits__item {
   min-width: 270px;
-  width: 100%;
 }
 .benefits__item::before {
   content: "";
   display: block;
+  width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: #F5F4FA;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .benefits__item {
-    width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits__item {
-    width: calc((100% - 90px) / 4);
-  }
 }
 
 .icon-antenna::before {
@@ -424,12 +393,6 @@ header {
   color: #212121;
   margin-top: 0;
   margin-bottom: 10px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .benefits__title {
-    text-align: left;
-  }
 }
 
 .benefits__text {
@@ -460,23 +423,6 @@ header {
 
 .what-section {
   padding-bottom: 94px;
-  display: none;
-}
-@media screen and (min-width: 480px) {
-  .what-section {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .what-section {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .what-section {
-    display: contents;
-    padding-bottom: 94px;
-  }
 }
 
 .what-top-text {
@@ -515,8 +461,6 @@ header {
 
 .persons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
 
@@ -552,24 +496,9 @@ header {
 .persons__card {
   background: #ffffff;
   display: block;
-  width: 100%;
+  width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-@media screen and (min-width: 480px) {
-  .persons__card {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .persons__card {
-    width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .persons__card {
-    width: calc((100% - 90px) / 4);
-  }
 }
 
 .social-wrap {
@@ -582,7 +511,10 @@ header {
   align-items: center;
   justify-content: center;
   padding-left: 0;
-  gap: 10px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social__link {
