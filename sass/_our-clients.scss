@@ -10,6 +10,19 @@
 
 .clients-title {
 font-weight: 700;
+font-size: 28px;
+line-height: calc(42 / 36);
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
+margin-bottom: 30px;
+margin-top: 0;
+@include mobile{
+font-size: 28px;
+}
+
+@include desktop{
+font-weight: 700;
 font-size: 36px;
 line-height: calc(42 / 36);
 text-align: center;
@@ -17,6 +30,7 @@ letter-spacing: 0.03em;
 color: #212121;
 margin-bottom: 30px;
 margin-top: 0;
+}
 }
 
 .clients-item {

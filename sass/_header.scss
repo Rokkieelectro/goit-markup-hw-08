@@ -29,15 +29,30 @@ align-items: center;
 .logo {
 font-family: 'Raleway';
 font-weight: 700;
+font-size: 24px;
+line-height: calc(31 / 26);
+text-decoration: none;
+cursor: pointer;
+
+  @include mobile {
+
+  }
+
+  @include desktop {
+font-family: 'Raleway';
+font-weight: 700;
 font-size: 26px;
 line-height: calc(31 / 26);
 text-decoration: none;
 cursor: pointer;
+  }
 }
 
 .logo__web {
+
+
   font-weight: 700;
-  font-size: 26px;
+  // font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #2196f3;
@@ -45,7 +60,7 @@ cursor: pointer;
 
 .logo__studio {
   font-weight: 700;
-  font-size: 26px;
+  // font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
@@ -53,8 +68,25 @@ cursor: pointer;
 }
 
 .menu {
+display:none;
+  @include mobile{
+   display: none;
+  } 
+  @include tablet {
+   font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-left: 90px;
+  gap: 50px;
+    display:flex;
+  }
 
-  font-weight: 500;
+  @include desktop {
+     font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -62,9 +94,9 @@ cursor: pointer;
   text-decoration: none;
   margin-bottom: 0;
   margin-left: 93px;
-  // display:flex;
   gap: 50px;
-   display:none;  //this shit must be removed, added for menu crafting
+    display:flex;
+  }
 }
 
 .menu__item {
@@ -108,10 +140,26 @@ cursor: pointer;
 }
 
 .contacts{
-margin-left: auto;
-// display: flex;
-gap:30px;
 display: none;
+  @include mobile {
+display: none;
+  }
+
+  @include tablet {
+width: auto;
+margin-left: auto;
+display: flex;
+flex-direction: column;
+gap:10px;
+  }
+
+  @include desktop {
+margin-left: auto;
+display: flex;
+flex-direction: row;
+gap:30px;
+  }
+
 }
 
 .contacts__mail{
@@ -178,9 +226,13 @@ display: none;
 }
 
 .sendwich-button {
+  
   margin-left: auto;
   background-color: transparent;
   border: none;
+  @include tablet {
+    display: none;
+  }
 }
 
 
@@ -195,6 +247,12 @@ display: none;
   z-index: 4;
   padding-top: 48px;
   padding-bottom: 48px;
+  >.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
 }
 
@@ -230,18 +288,64 @@ margin-bottom: 30px;
 
 // .mob-contacts {
 // }
-// .mob-contacts__tel {
-// }
-// .mob-contacts__mail {
-// }
+.mob-contacts__tel {
+font-weight: 500;
+font-size: 34px;
+line-height: calc(40 / 34);
+letter-spacing: 0.02em;
+color: #2196F3;
+text-decoration: none;
+margin-top: 50px;
+display: block;
+}
+ .mob-contacts__mail {
+  font-weight: 500;
+font-size: 24px;
+line-height: calc(28 / 24);
+letter-spacing: 0.02em;
+color: #757575;
+text-decoration: none;
+display: block;
+margin-top: 30px;
+margin-bottom: 60px;
+}
+
 // .mob-social-wrap {
+
 // }
-// .mob-social__list {
-// }
-// .mob-social__item {
-// }
-// .mob-social__link {
-// }
+.mob-social__list {
+ list-style: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  gap: 10px;
+}
+.mob-social__item {
+width: auto;
+text-align: center;
+ 
+}
+
+.mob-social__item:not(:last-child){
+  &::after {
+    content: "";
+    width: 22px;
+    height: 0;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+transform: rotate(90deg);
+  }
+
+}
+
+.mob-social__link {
+  text-decoration: none; 
+   font-weight: 500;
+font-size: 18px;
+line-height: 1.22;
+letter-spacing: 0.02em;
+color: #2196F3;
+ padding-right: 10px;
+ }
 
 .mob-close-button {
   width: 40px;
@@ -253,8 +357,14 @@ margin-bottom: 30px;
  display:flex;
  align-items: center;
   justify-content: center;
-
+  &:hover {
+  color: var(--hover-color);
 }
+  &:focus {
+  color:var(--focus-color);
+}
+}
+
 
 // .icon-menu-close {
 // }

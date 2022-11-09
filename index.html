@@ -18,7 +18,7 @@
   <body>
      <header class="header" >
      <div class="container flex-container">
-      <div>
+
         <a class="logo" href="index.html">
           <span class="logo__web">Web</span
           ><span class="logo__studio">Studio</span>
@@ -31,8 +31,8 @@
           <li><a class="menu__item" href="">Contacts</a></li>
         </ul>
       </nav>
-      </div>
-       <button type="button" class="sendwich-button">
+
+       <button type="button" class="sendwich-button" data-menu-open>
           <svg class="icon-menu" width="24" height="16">
             <use href="./images/symbol-defs.svg#icon-menu_24px" width="24" height="16"></use>
           </svg>
@@ -60,19 +60,22 @@
       </div>
      </div>
       
-<!-- <div class="mob-menu">
+ <div class="mob-menu is-hidden" data-menu>
   <div class="container">
-    <button type="button" class="mob-close-button" >
+        <div class="mob-menu-top">
+           <button type="button" class="mob-close-button" data-menu-close >
           <svg class="icon-menu-close"  width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-close-mob" ></use>
           </svg>
         </button>
-
-         <ul class="mob-menu-list list">
+           <ul class="mob-menu-list list">
           <li class="mob-menu__item"><a class="mob-menu__link" href="index.html">Studio</a></li>
           <li class="mob-menu__item"><a class="mob-menu__link" href="portfolio.html">Portfolio</a></li>
           <li class="mob-menu__item"><a class="mob-menu__link" href="">Contacts</a></li>
         </ul>
+        </div>
+        <div class="mob-menu-bottom">
+
           <div class="mob-contacts">  
       <div>
           <a class="mob-contacts__tel" href="tel:+38 096 111 11 11">
@@ -111,12 +114,14 @@
             </div>
 
       </div>
-</div>
+</div> 
+        </div>
+        
 
-  </div> -->
+  </div> 
    
     </header>
-    <main>
+    <main> 
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective solutions for your business</h1>
@@ -229,6 +234,7 @@
               <img
               src="./images/team1-desk.jpg"
               alt="man in red shirt"
+               class="card-image"
             />
             </picture>
             
@@ -275,14 +281,29 @@
                 <picture>
               <source
               srcset= "
+              images/team2-desk.jpg 1x,
+              images/team2-desk-2x.jpg 2x
+              "
+              media="(min-width: 1200)"
+              />
+               <source
+              srcset= "
+              images/team2-tab.jpg 1x,
+              images/team2-tab-2x.jpg 2x
+              "
+              media="(min-width: 768)"
+              />
+               <source
+              srcset= "
               images/team2-mob.jpg 1x,
               images/team2-mob-2x.jpg 2x
               "
-              media="(min-width: 480)"
+              media="(max-width: 480)"
               />
                <img
               src="images/team2-desk.jpg"
               alt="blonde in jacket"
+               class="card-image"
              
             />
             </picture>
@@ -327,14 +348,31 @@
           <li class="persons__card">
              <picture>
               <source
-              srcset= "images/team3-mob.jpg 1x,
-                      images/team3-mob-2x.jpg 2x"
-                    media="(min-width: 480)"
-                    type="image"
+              srcset= "
+              images/team3-desk.jpg 1x,
+              images/team3-desk-2x.jpg 2x
+              "
+              media="(min-width: 1200)"
+              />
+               <source
+              srcset= "
+              images/team3-tab.jpg 1x,
+              images/tea32-tab-2x.jpg 2x
+              "
+              media="(min-width: 768)"
+              />
+               <source
+              srcset= "
+              images/team3-mob.jpg 1x,
+              images/team3-mob-2x.jpg 2x
+              "
+              media="(max-width: 480)"
               />
                <img
-              src="images/team3-mob.jpg"
-              alt="man in blue shirt"
+              src="images/team3-desk.jpg"
+              alt="blonde in jacket"
+               class="card-image"
+             
             />
             </picture>
             
@@ -377,16 +415,33 @@
            
           </li>
           <li class="persons__card">
-             <picture>
+              <picture>
               <source
-              srcset= "images/team4-mob.jpg 1x,
-                      images/team4-mob-2x.jpg 2x"
-                    media="(min-width: 480)"
-                    type="image"
+              srcset= "
+              images/team4-desk.jpg 1x,
+              images/team4-desk-2x.jpg 2x
+              "
+              media="(min-width: 1200)"
               />
-              <img
-              src="images/team4-mob.jpg"
-              alt="man in black t-shirt"
+               <source
+              srcset= "
+              images/team4-tab.jpg 1x,
+              images/team4-tab-2x.jpg 2x
+              "
+              media="(min-width: 768)"
+              />
+               <source
+              srcset= "
+              images/team4-mob.jpg 1x,
+              images/team4-mob-2x.jpg 2x
+              "
+              media="(max-width: 480)"
+              />
+               <img
+              src="images/team4-desk.jpg"
+              alt="blonde in jacket"
+              class="card-image"
+             
             />
             </picture>
            
@@ -668,5 +723,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script> 
+    <script src="./js/menu.js"></script> 
   </body>
 </html>
