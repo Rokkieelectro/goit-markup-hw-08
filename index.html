@@ -16,14 +16,15 @@
     <title>WebStudio</title>
   </head>
   <body>
-    <!-- <header class="header" >
+     <header class="header" >
      <div class="container flex-container">
       <div>
-        <nav class="navigation">
         <a class="logo" href="index.html">
           <span class="logo__web">Web</span
           ><span class="logo__studio">Studio</span>
-        </a>
+        </a> 
+       
+         <nav class="navigation">
         <ul class="menu list">
           <li><a class="menu__item current" href="index.html">Studio</a></li>
           <li><a class="menu__item" href="portfolio.html">Portfolio</a></li>
@@ -31,6 +32,11 @@
         </ul>
       </nav>
       </div>
+       <button type="button" class="sendwich-button">
+          <svg class="icon-menu" width="24" height="16">
+            <use href="./images/symbol-defs.svg#icon-menu_24px" width="24" height="16"></use>
+          </svg>
+        </button>
       <div class="contacts">  
         <div>
         <a class="contacts__mail" href="info@devstudio.com">
@@ -54,6 +60,61 @@
       </div>
      </div>
       
+<div class="mob-menu">
+  <div class="container">
+    <button type="button" class="mob-close-button" >
+          <svg class="icon-menu-close"  width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-close-mob" ></use>
+          </svg>
+        </button>
+
+         <ul class="mob-menu-list list">
+          <li class="mob-menu__item"><a class="mob-menu__link" href="index.html">Studio</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link" href="portfolio.html">Portfolio</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link" href="">Contacts</a></li>
+        </ul>
+          <div class="mob-contacts">  
+      <div>
+          <a class="mob-contacts__tel" href="tel:+38 096 111 11 11">
+          +38 096 111 11 11
+        </a>
+      </div>
+        <div>
+        <a class="mob-contacts__mail" href="info@devstudio.com"> 
+        info@devstudio.com
+      </a>
+      </div>
+
+            <div class="mob-social-wrap">
+              <ul class="mob-social__list">
+                  <li class="mob-social__item">
+                    <a class="mob-social__link" href=""> 
+                   Instagram
+                    </a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a class="mob-social__link" href="">
+                       Twitter
+                    </a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a class="mob-social__link" href="">
+                      Facebook
+                    </a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a class="mob-social__link" href="">
+                       LinkedIn
+                    </a>
+                  </li>
+                </ul>
+            </div>
+
+      </div>
+</div>
+
+  </div>
+   
     </header>
     <main>
       <section class="hero">
@@ -61,7 +122,7 @@
           <h1 class="hero-title">Effective solutions for your business</h1>
         <button type="button" class="hero-button" data-modal-open><span class="hero-button-text">Request Services</span> </button>
         </div>
-      </section> -->
+      </section> 
       <section class=" section">
         <div class="container">
         <h2 hidden>Our benefits</h2>
@@ -142,16 +203,35 @@
       </section>
     <section class="team section">
         <div class="container ">
-         <h2 class="team-title ">Our team</h2>
+        <h2 class="team-title ">Our team</h2>
         <ul class="list persons">
           <li  class="persons__card">
-            <img
-              src="images/tm1.jpg"
+            <picture>
+              <source
+              srcset="./images/team1-desk.jpg 1x,
+                      ./images/team1-desk-2x.jpg 2x"
+                      media=(min-width: 1200)
+                    type="image"
+                    
+              />
+              <source
+              srcset="./images/team1-tab.jpg 1x,
+                      ./images/team1-tab-2x.jpg 2x"
+                    media="(min-width: 676)"
+                
+              />
+              <source
+              srcset="./images/team1-mob.jpg 1x,
+                      ./images/team1-mob-2x.jpg 2x"
+                    media="(max-width: 675)"
+                
+              />
+              <img
+              src="./images/team1-desk.jpg"
               alt="man in red shirt"
-              width="270"
-              height="260"
-              
             />
+            </picture>
+            
             <div class="persons__card-sign">
               <h3 class="persons__names">Igor Demyanenko</h3>
               <p class="persons__positions">Product Designer</p>
@@ -192,12 +272,21 @@
             
           </li>
           <li class="persons__card">
-            <img
-              src="images/tm2.jpg"
+                <picture>
+              <source
+              srcset= "
+              images/team2-mob.jpg 1x,
+              images/team2-mob-2x.jpg 2x
+              "
+              media="(min-width: 480)"
+              />
+               <img
+              src="images/team2-desk.jpg"
               alt="blonde in jacket"
-              width="270"
-              height="260"
+             
             />
+            </picture>
+           
             <div class="persons__card-sign">
               <h3 class="persons__names">Olga Repina</h3>
               <p class="persons__positions">Frontend Developer</p>
@@ -236,12 +325,19 @@
             </div>
           </li>
           <li class="persons__card">
-            <img
-              src="images/tm3.jpg"
+             <picture>
+              <source
+              srcset= "images/team3-mob.jpg 1x,
+                      images/team3-mob-2x.jpg 2x"
+                    media="(min-width: 480)"
+                    type="image"
+              />
+               <img
+              src="images/team3-mob.jpg"
               alt="man in blue shirt"
-              width="270"
-              height="260"
             />
+            </picture>
+            
             <div class="persons__card-sign">
               <h3 class="persons__names">Mykola Tarasov</h3>
               <p class="persons__positions">Marketing</p>
@@ -281,12 +377,19 @@
            
           </li>
           <li class="persons__card">
-            <img
-              src="images/tm4.jpg"
+             <picture>
+              <source
+              srcset= "images/team4-mob.jpg 1x,
+                      images/team4-mob-2x.jpg 2x"
+                    media="(min-width: 480)"
+                    type="image"
+              />
+              <img
+              src="images/team4-mob.jpg"
               alt="man in black t-shirt"
-              width="270"
-              height="260"
             />
+            </picture>
+           
             <div class="persons__card-sign">
               <h3 class="persons__names">Mykhailo Yermakov</h3>
               <p class="persons__positions">UI Designer</p>
@@ -328,7 +431,7 @@
         </ul> 
         </div>
         
-       <!-- </section>
+      </section>
       <section class="clients-section">
         <div class="container">
           <h2 class="clients-title ">Permanent clients</h2>
@@ -378,7 +481,8 @@
         </ul>
       </section>
     </main>
-    <footer class="footer">
+      <footer class="footer">
+      
       <div class="container common">
         <div class="footer-contacts">
           <a class="footer-logo" href="index.html">
@@ -427,6 +531,8 @@
                 </ul>
             </div>
           </div>
+          
+        
 
 
 
@@ -450,6 +556,7 @@
             </button>
             </div>
             </form>
+          </div>
           </div>
     
     
@@ -560,6 +667,6 @@
         
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script> 
   </body>
 </html>

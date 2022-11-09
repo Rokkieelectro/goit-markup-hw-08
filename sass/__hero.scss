@@ -1,0 +1,117 @@
+.hero {
+  background: #2f303a;
+  text-align: center;
+padding-top: 118px;
+padding-bottom: 118px;
+  background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+  ), 
+  url(../images/hero-mob.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  @include retina {
+    background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+    url(../images/hero-mob-2x.jpg);
+}
+    @include mobile {
+   width: 100%;
+     background-size: cover;
+  }
+   @include tablet {
+    padding-top: 118px;
+    padding-bottom: 118px;
+     background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+  ), 
+  url(../images/hero-tab.jpg);
+  @include retina {
+    background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+  url(../images/hero-tab-2x.jpg);
+}
+  }
+   @include desktop {
+     padding-top: 200px;
+     padding-bottom: 200px;
+      background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+  ), 
+  url(../images/bg_hero_image.jpg);
+  @include retina {
+    background-image: linear-gradient(
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+   url(../images/hero-desk-2x.jpg);
+  }
+}
+  }
+  
+
+
+
+
+
+.hero-title {
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.36;
+
+font-weight: 900;
+font-size: 26px;
+line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+ @include mobile {
+font-weight: 900;
+font-size: 26px;
+line-height: 1.62;
+color: #FFFFFF;
+  }
+     @include tablet {
+    width: 768px;
+    padding-left: 200px;
+    padding-right: 200px;
+     }
+      @include desktop {
+    width: 1200px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+   }
+}
+
+.hero-button {
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+cursor: pointer;
+min-width: 216px;
+padding: 0;
+border: none;
+margin-top: 30px;
+}
+
+.hero-button-text {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
