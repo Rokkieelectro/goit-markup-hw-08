@@ -1,3 +1,8 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
 :root {
   --hover-color: #2196f3;
   --focus-color: #2196f3;
@@ -226,6 +231,16 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 1, 0.2, 1);
 }
+@media screen and (min-width: 480px) {
+  .contacts__mail {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__mail {
+    font-size: 12px;
+  }
+}
 .contacts__mail:hover, .contacts__mail:focus {
   color: var(--hover-color);
 }
@@ -257,7 +272,7 @@ header {
 
 .contacts__tel {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
@@ -267,6 +282,21 @@ header {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 1, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .contacts__tel {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__tel {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__tel {
+    font-size: 14px;
+  }
 }
 .contacts__tel:hover, .contacts__tel:focus {
   color: var(--hover-color);
@@ -679,6 +709,27 @@ header {
   margin-top: 0;
 }
 
+.what {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .what {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .what {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .what {
+    display: flex;
+    padding-bottom: 94px;
+    padding-top: 0;
+  }
+}
+
 .what-title {
   font-weight: 700;
   font-size: 36px;
@@ -688,33 +739,17 @@ header {
   color: #212121;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 1200px) {
+  .what-title {
+    margin-top: 0;
+  }
+}
 
 .flex-what {
   display: flex;
   gap: 30px;
   align-items: center;
   width: calc(100% - 30px);
-}
-
-.what-section {
-  padding-bottom: 94px;
-  display: none;
-}
-@media screen and (min-width: 480px) {
-  .what-section {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .what-section {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .what-section {
-    display: contents;
-    padding-bottom: 94px;
-  }
 }
 
 .what-top-text {
@@ -749,11 +784,11 @@ header {
   line-height: 1.1785714286;
   text-align: center;
   color: var(--main-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 @media screen and (min-width: 768px) {
   .team-title {
-    /* identical to box height */
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
@@ -789,6 +824,11 @@ header {
   color: var(--main-text-color);
   margin-bottom: 10px;
 }
+@media screen and (min-width: 480px) {
+  .persons__names {
+    margin-top: 0;
+  }
+}
 
 .persons__positions {
   font-weight: 400;
@@ -801,7 +841,6 @@ header {
 
 .team {
   background: #f5f4fa;
-  padding-bottom: 94px;
 }
 
 .persons__card-sign {
@@ -1102,6 +1141,11 @@ header {
 @media screen and (min-width: 768px) {
   .footer-join-title {
     padding-top: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-join-title {
+    text-align: left;
   }
 }
 

@@ -126,7 +126,6 @@ margin-top: 60px;
     padding-right: 15px;
   
 }
-
 }
 
 
@@ -142,6 +141,9 @@ color: #FFFFFF;
 text-align: center;
  @include tablet {
   padding-top: 5px;
+ }
+ @include desktop {
+  text-align: left;
  }
 }
 
@@ -209,7 +211,8 @@ color: #FFFFFF;
   margin-bottom: 15px;
    @include desktop {
   text-align: left;
-  }
+   }
+
 }
 
 .subscribe-wrap {
@@ -287,3 +290,4 @@ margin-right: 10px;
 .button-icon {
   fill: #FFFFFF;
 }
+

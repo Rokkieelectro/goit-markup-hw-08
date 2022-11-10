@@ -4,12 +4,12 @@ header {
   padding-top: 24px;
   padding-bottom: 25px;
 
-
 }
 
 .flex-container {
 display: flex;
 align-items: center;
+
 }
 
 .list {
@@ -49,8 +49,6 @@ cursor: pointer;
 }
 
 .logo__web {
-
-
   font-weight: 700;
   // font-size: 26px;
   line-height: 1.19;
@@ -122,6 +120,7 @@ display:none;
 
 
 
+
 .menu .menu__item.current {
     color: var(--focus-color);
 }
@@ -175,6 +174,12 @@ gap:30px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 1, 0.2, 1);
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 12px;
+  }
   &:hover,
   &:focus {
   color:var(--hover-color);
@@ -209,7 +214,7 @@ gap:30px;
 
 .contacts__tel {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
@@ -219,6 +224,16 @@ gap:30px;
   transition-property:color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 1, 0.2, 1);
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include desktop {
+     font-size: 14px;
+  }
   &:hover,
   &:focus {
   color: var(--hover-color);
@@ -235,18 +250,15 @@ gap:30px;
   }
 }
 
-
-
-
 .mob-menu {
   position: fixed;
-  top: 0;
+  top:0;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
   z-index: 4;
-  padding-top: 48px;
-  padding-bottom: 48px;
+   padding-top: 48px;
+   padding-bottom: 48px;
   >.container {
     display: flex;
     height: 100%;
@@ -256,10 +268,6 @@ gap:30px;
 
 }
 
-
-// .list {
-
-// }
 
 .mob-menu-list{
   list-style:none;
@@ -364,6 +372,7 @@ color: #2196F3;
   color:var(--focus-color);
 }
 }
+
 
 
 // .icon-menu-close {

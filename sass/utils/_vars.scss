@@ -1,3 +1,9 @@
+body {
+font-family: "Roboto", sans-serif;
+margin: 0;
+}
+
+
 :root {
     --hover-color: #2196f3; 
     --focus-color: #2196f3;
@@ -5,7 +11,6 @@
     --add-text-color: #757575;
     --icons-main-color:  #AFB1B8;
     --line-height-1416: 1.14;
-
 }
 
 .no-scroll{
